@@ -21,6 +21,10 @@ RUN \
 ADD root/.bashrc /root/.bashrc
 ADD root/.gitconfig /root/.gitconfig
 ADD root/.scripts /root/.scripts
+ADD root/.bashrc /root/bash.bashrc
+
+# For bash auto completion
+RUN cat /root/bash.bashrc > /etc/bash.bashrc
 
 # Set environment variables.
 ENV HOME /root
